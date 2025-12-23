@@ -6,31 +6,37 @@ const galleryImages = [
     id: 1,
     title: "Mobile Repairing Work",
     category: "Repairs",
+    image: "https://res.cloudinary.com/daiev9gkn/image/upload/v1766501492/image_search_1766501381343_y2gtdo.jpg",
   },
   {
     id: 2,
     title: "Tools & Equipment",
     category: "Equipment",
+    image: "https://res.cloudinary.com/daiev9gkn/image/upload/v1766501492/image_search_1766501318178_f03tha.jpg",
   },
   {
     id: 3,
     title: "Spare Parts Collection",
     category: "Parts",
+    image: "https://res.cloudinary.com/daiev9gkn/image/upload/v1766501493/image_search_1766501270302_pmqhqb.png",
   },
   {
     id: 4,
     title: "Customer Solutions",
     category: "Repairs",
+    image: "https://res.cloudinary.com/daiev9gkn/image/upload/v1766501493/image_search_1766501344913_j6ne1c.jpg",
   },
   {
     id: 5,
     title: "Accessories Display",
     category: "Accessories",
+    image: "https://res.cloudinary.com/daiev9gkn/image/upload/v1766501494/image_search_1766501247518_al5bbe.png",
   },
   {
     id: 6,
     title: "Quality Testing",
     category: "Equipment",
+    image: "https://res.cloudinary.com/daiev9gkn/image/upload/v1766501494/image_search_1766501460707_n2sfbz.jpg",
   },
 ];
 
@@ -61,23 +67,12 @@ export const GallerySection = () => {
               className="group relative aspect-square rounded-2xl overflow-hidden cursor-pointer shadow-card"
               onClick={() => setSelectedImage(index)}
             >
-              {/* Placeholder gradient background */}
-              <div 
-                className="absolute inset-0 bg-gradient-to-br from-primary/20 via-primary/10 to-accent/20"
-                style={{
-                  background: `linear-gradient(${135 + index * 30}deg, 
-                    hsl(var(--primary) / 0.3) 0%, 
-                    hsl(var(--primary) / 0.1) 50%, 
-                    hsl(var(--accent) / 0.2) 100%)`
-                }}
+              {/* Gallery Image */}
+              <img 
+                src={image.image} 
+                alt={image.title}
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
-              
-              {/* Icon placeholder */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-16 h-16 rounded-full bg-card/80 backdrop-blur-sm flex items-center justify-center">
-                  <span className="text-2xl">📱</span>
-                </div>
-              </div>
 
               {/* Overlay */}
               <div className="absolute inset-0 bg-foreground/0 group-hover:bg-foreground/60 transition-all duration-300 flex items-center justify-center">
@@ -105,23 +100,12 @@ export const GallerySection = () => {
             </button>
             
             <div className="max-w-4xl w-full bg-card rounded-2xl overflow-hidden shadow-2xl animate-scale-in">
-              <div 
-                className="aspect-video"
-                style={{
-                  background: `linear-gradient(${135 + selectedImage * 30}deg, 
-                    hsl(var(--primary) / 0.3) 0%, 
-                    hsl(var(--primary) / 0.1) 50%, 
-                    hsl(var(--accent) / 0.2) 100%)`
-                }}
-              >
-                <div className="w-full h-full flex items-center justify-center">
-                  <div className="text-center">
-                    <span className="text-6xl">📱</span>
-                    <p className="text-foreground mt-4 font-display text-xl font-bold">
-                      {galleryImages[selectedImage].title}
-                    </p>
-                  </div>
-                </div>
+              <div className="aspect-video">
+                <img 
+                  src={galleryImages[selectedImage].image} 
+                  alt={galleryImages[selectedImage].title}
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div className="p-6">
                 <h3 className="font-display text-xl font-bold text-foreground">

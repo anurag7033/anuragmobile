@@ -34,9 +34,11 @@ export const Navbar = () => {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <a href="#home" className="flex items-center gap-2">
-            <div className="w-10 h-10 rounded-xl bg-gradient-hero flex items-center justify-center">
-              <Smartphone className="w-5 h-5 text-primary-foreground" />
-            </div>
+            <img 
+              src="https://res.cloudinary.com/daiev9gkn/image/upload/v1766501038/1000085881-Picsart-AiImageEnhancer.jpg_estzdn.png" 
+              alt="Anurag Mobile Repairing Centre Logo"
+              className="w-12 h-12 rounded-xl object-cover"
+            />
             <span className="font-display font-bold text-lg md:text-xl text-foreground">
               Anurag Mobile
             </span>
