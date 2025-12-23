@@ -58,20 +58,20 @@ export const Footer = () => {
             <ul className="space-y-4">
               <li>
                 <a
+                  href="tel:7033067221"
+                  className="flex items-center gap-3 text-background/70 hover:text-accent transition-colors group"
+                >
+                  <Phone className="w-5 h-5 text-accent" />
+                  <span>7033067221 (Primary)</span>
+                </a>
+              </li>
+              <li>
+                <a
                   href="tel:9304490107"
                   className="flex items-center gap-3 text-background/70 hover:text-accent transition-colors group"
                 >
                   <Phone className="w-5 h-5 text-accent" />
                   <span>9304490107</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="tel:7033067221"
-                  className="flex items-center gap-3 text-background/70 hover:text-accent transition-colors group"
-                >
-                  <Phone className="w-5 h-5 text-accent" />
-                  <span>7033067221</span>
                 </a>
               </li>
               <li>

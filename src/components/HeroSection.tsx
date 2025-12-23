@@ -51,10 +51,10 @@ export const HeroSection = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-up" style={{ animationDelay: '0.3s' }}>
-              <a href="tel:9304490107">
+              <a href="tel:7033067221">
                 <Button variant="accent" size="lg" className="w-full sm:w-auto">
                   <Phone className="w-5 h-5" />
-                  9304490107
+                  7033067221
                 </Button>
               </a>
               <a href="#services">
@@ -89,7 +89,7 @@ export const HeroSection = () => {
               
               <div className="space-y-4">
                 <a
-                  href="tel:9304490107"
+                  href="tel:7033067221"
                   className="flex items-center gap-4 p-4 rounded-xl bg-primary/5 hover:bg-primary/10 transition-colors group"
                 >
                   <div className="w-12 h-12 rounded-xl bg-gradient-hero flex items-center justify-center">
@@ -98,13 +98,13 @@ export const HeroSection = () => {
                   <div>
                     <p className="text-sm text-muted-foreground">Primary</p>
                     <p className="font-semibold text-foreground group-hover:text-primary transition-colors">
-                      9304490107
+                      7033067221
                     </p>
                   </div>
                 </a>
 
                 <a
-                  href="tel:7033067221"
+                  href="tel:9304490107"
                   className="flex items-center gap-4 p-4 rounded-xl bg-primary/5 hover:bg-primary/10 transition-colors group"
                 >
                   <div className="w-12 h-12 rounded-xl bg-gradient-hero flex items-center justify-center">
@@ -113,7 +113,7 @@ export const HeroSection = () => {
                   <div>
                     <p className="text-sm text-muted-foreground">Secondary</p>
                     <p className="font-semibold text-foreground group-hover:text-primary transition-colors">
-                      7033067221
+                      9304490107
                     </p>
                   </div>
                 </a>
