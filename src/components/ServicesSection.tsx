@@ -29,9 +29,9 @@ const services = [
 
 export const ServicesSection = () => {
   return (
-    <section id="services" className="py-20 md:py-32 bg-background relative">
+    <section id="services" className="py-12 md:py-20 lg:py-32 bg-background relative">
       {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
+      <div className="absolute inset-0 opacity-5 hidden sm:block">
         <div className="absolute inset-0" style={{
           backgroundImage: 'radial-gradient(circle at 1px 1px, hsl(var(--foreground)) 1px, transparent 0)',
           backgroundSize: '30px 30px'
@@ -40,46 +40,46 @@ export const ServicesSection = () => {
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-4">
+        <div className="text-center mb-8 md:mb-16">
+          <span className="inline-block px-3 py-1.5 md:px-4 md:py-2 rounded-full bg-primary/10 text-primary text-xs md:text-sm font-semibold mb-3 md:mb-4">
             Our Services
           </span>
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+          <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-3 md:mb-4">
             Professional Mobile Solutions
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-sm md:text-lg text-muted-foreground max-w-2xl mx-auto px-2">
             We offer a wide range of mobile repair and accessory services with quality parts and skilled technicians.
           </p>
         </div>
 
         {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
           {services.map((service, index) => (
             <div
               key={index}
-              className="group bg-card rounded-2xl p-6 shadow-card hover:shadow-lg transition-all duration-300 hover:-translate-y-2 border border-border/50"
+              className="group bg-card rounded-xl md:rounded-2xl p-4 md:p-6 shadow-card hover:shadow-lg transition-all duration-300 md:hover:-translate-y-2 border border-border/50"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {/* Icon */}
-              <div className="w-14 h-14 rounded-xl bg-gradient-hero flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
-                <service.icon className="w-7 h-7 text-primary-foreground" />
+              <div className="w-11 h-11 md:w-14 md:h-14 rounded-lg md:rounded-xl bg-gradient-hero flex items-center justify-center mb-3 md:mb-5 group-hover:scale-110 transition-transform duration-300">
+                <service.icon className="w-5 h-5 md:w-7 md:h-7 text-primary-foreground" />
               </div>
 
               {/* Title */}
-              <h3 className="font-display text-xl font-bold text-foreground mb-3">
+              <h3 className="font-display text-lg md:text-xl font-bold text-foreground mb-2 md:mb-3">
                 {service.title}
               </h3>
 
               {/* Description */}
-              <p className="text-muted-foreground text-sm mb-5 leading-relaxed">
+              <p className="text-muted-foreground text-xs md:text-sm mb-3 md:mb-5 leading-relaxed">
                 {service.description}
               </p>
 
               {/* Features */}
-              <ul className="space-y-2">
+              <ul className="space-y-1.5 md:space-y-2">
                 {service.features.map((feature, idx) => (
-                  <li key={idx} className="flex items-center gap-2 text-sm text-foreground/80">
-                    <Check className="w-4 h-4 text-accent flex-shrink-0" />
+                  <li key={idx} className="flex items-center gap-1.5 md:gap-2 text-xs md:text-sm text-foreground/80">
+                    <Check className="w-3.5 h-3.5 md:w-4 md:h-4 text-accent flex-shrink-0" />
                     {feature}
                   </li>
                 ))}
@@ -89,8 +89,8 @@ export const ServicesSection = () => {
         </div>
 
         {/* Bottom Banner */}
-        <div className="mt-16 bg-gradient-hero rounded-2xl p-8 md:p-12 text-center">
-          <div className="flex flex-wrap justify-center gap-8 md:gap-16">
+        <div className="mt-8 md:mt-16 bg-gradient-hero rounded-xl md:rounded-2xl p-5 md:p-8 lg:p-12 text-center">
+          <div className="grid grid-cols-2 sm:flex sm:flex-wrap sm:justify-center gap-4 md:gap-8 lg:gap-16">
             {[
               { label: "Quality Parts", value: "✓" },
               { label: "Skilled Technicians", value: "✓" },
@@ -98,8 +98,8 @@ export const ServicesSection = () => {
               { label: "Affordable Prices", value: "✓" },
             ].map((item, index) => (
               <div key={index} className="text-center">
-                <div className="text-3xl font-bold text-accent mb-1">{item.value}</div>
-                <div className="text-primary-foreground/80 text-sm font-medium">{item.label}</div>
+                <div className="text-xl md:text-3xl font-bold text-accent mb-0.5 md:mb-1">{item.value}</div>
+                <div className="text-primary-foreground/80 text-xs md:text-sm font-medium">{item.label}</div>
               </div>
             ))}
           </div>

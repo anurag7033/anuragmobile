@@ -30,16 +30,16 @@ export const Navbar = () => {
           : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16 md:h-20">
+      <div className="container mx-auto px-3 md:px-4">
+        <div className="flex items-center justify-between h-14 md:h-20">
           {/* Logo */}
-          <a href="#home" className="flex items-center gap-2">
+          <a href="#home" className="flex items-center gap-2 flex-shrink-0">
             <img 
               src="https://res.cloudinary.com/daiev9gkn/image/upload/v1766501038/1000085881-Picsart-AiImageEnhancer.jpg_estzdn.png" 
               alt="Anurag Mobile Repairing Centre Logo"
-              className="w-12 h-12 rounded-xl object-cover"
+              className="w-9 h-9 md:w-12 md:h-12 rounded-lg md:rounded-xl object-cover"
             />
-            <span className="font-display font-bold text-lg md:text-xl text-foreground">
+            <span className="font-display font-bold text-base md:text-xl text-foreground">
               Anurag Mobile
             </span>
           </a>
