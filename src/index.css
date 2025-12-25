@@ -6,8 +6,12 @@
 
 @layer base {
   :root {
-    --background: 210 20% 98%;
+    --background: 220 14% 96%;
     --foreground: 222 47% 11%;
+    
+    /* Tech grid pattern */
+    --bg-pattern: radial-gradient(hsl(215 20% 85%) 1px, transparent 1px);
+    --bg-pattern-size: 22px 22px;
 
     --card: 0 0% 100%;
     --card-foreground: 222 47% 11%;

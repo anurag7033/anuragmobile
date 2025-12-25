@@ -1,18 +1,20 @@
 import { useState, useEffect } from "react";
-import { Menu, X, Phone, Smartphone } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link, useLocation } from "react-router-dom";
 
 const navLinks = [
-  { name: "Home", href: "#home" },
-  { name: "Services", href: "#services" },
-  { name: "Gallery", href: "#gallery" },
-  { name: "About", href: "#about" },
-  { name: "Contact", href: "#contact" },
+  { name: "Home", href: "/" },
+  { name: "Services", href: "/services" },
+  { name: "Gallery", href: "/gallery" },
+  { name: "About", href: "/about" },
+  { name: "Contact", href: "/contact" },
 ];
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,18 +24,27 @@ export const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Close mobile menu on route change
+  useEffect(() => {
+    setIsOpen(false);
+  }, [location.pathname]);
+
+  const isActive = (href: string) => {
+    return location.pathname === href;
+  };
+
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
           ? "bg-card/95 backdrop-blur-md shadow-card"
-          : "bg-transparent"
+          : "bg-card/80 backdrop-blur-sm"
       }`}
     >
       <div className="container mx-auto px-3 md:px-4">
         <div className="flex items-center justify-between h-14 md:h-20">
           {/* Logo */}
-          <a href="#home" className="flex items-center gap-2 flex-shrink-0">
+          <Link to="/" className="flex items-center gap-2 flex-shrink-0">
             <img 
               src="https://res.cloudinary.com/daiev9gkn/image/upload/v1766501038/1000085881-Picsart-AiImageEnhancer.jpg_estzdn.png" 
               alt="Anurag Mobile Repairing Centre Logo"
@@ -42,24 +53,28 @@ export const Navbar = () => {
             <span className="font-display font-bold text-base md:text-xl text-foreground">
               Anurag Mobile
             </span>
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.name}
-                href={link.href}
-                className="text-muted-foreground hover:text-primary transition-colors duration-200 font-medium"
+                to={link.href}
+                className={`transition-colors duration-200 font-medium ${
+                  isActive(link.href)
+                    ? "text-primary font-semibold"
+                    : "text-muted-foreground hover:text-primary"
+                }`}
               >
                 {link.name}
-              </a>
+              </Link>
             ))}
           </div>
 
           {/* CTA Button */}
           <div className="hidden md:flex items-center gap-4">
-            <a href="tel:9304490107">
+            <a href="tel:7033067221">
               <Button variant="accent" size="default">
                 <Phone className="w-4 h-4" />
                 Call Now
@@ -81,16 +96,20 @@ export const Navbar = () => {
           <div className="md:hidden py-4 border-t border-border animate-fade-up">
             <div className="flex flex-col gap-4">
               {navLinks.map((link) => (
-                <a
+                <Link
                   key={link.name}
-                  href={link.href}
-                  className="text-muted-foreground hover:text-primary transition-colors duration-200 font-medium py-2"
+                  to={link.href}
+                  className={`transition-colors duration-200 font-medium py-2 ${
+                    isActive(link.href)
+                      ? "text-primary font-semibold"
+                      : "text-muted-foreground hover:text-primary"
+                  }`}
                   onClick={() => setIsOpen(false)}
                 >
                   {link.name}
-                </a>
+                </Link>
               ))}
-              <a href="tel:9304490107">
+              <a href="tel:7033067221">
                 <Button variant="accent" className="w-full mt-2">
                   <Phone className="w-4 h-4" />
                   Call Now

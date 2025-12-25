@@ -1,8 +1,9 @@
 import { Phone, Mail, Smartphone, MapPin } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export const Footer = () => {
   return (
-    <footer id="contact" className="bg-foreground text-background relative overflow-hidden">
+    <footer className="bg-foreground text-background relative overflow-hidden">
       {/* Decorative Elements */}
       <div className="absolute top-0 left-0 w-full h-1 bg-gradient-accent" />
       <div className="absolute top-20 right-10 w-48 md:w-64 h-48 md:h-64 bg-primary/10 rounded-full blur-3xl hidden sm:block" />
@@ -37,14 +38,20 @@ export const Footer = () => {
               Quick Links
             </h4>
             <ul className="space-y-2 md:space-y-3">
-              {["Home", "Services", "Gallery", "About"].map((link) => (
-                <li key={link}>
-                  <a
-                    href={`#${link.toLowerCase()}`}
+              {[
+                { name: "Home", href: "/" },
+                { name: "Services", href: "/services" },
+                { name: "Gallery", href: "/gallery" },
+                { name: "About", href: "/about" },
+                { name: "Contact", href: "/contact" },
+              ].map((link) => (
+                <li key={link.name}>
+                  <Link
+                    to={link.href}
                     className="text-background/70 hover:text-accent transition-colors duration-200 text-sm md:text-base"
                   >
-                    {link}
-                  </a>
+                    {link.name}
+                  </Link>
                 </li>
               ))}
             </ul>
