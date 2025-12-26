@@ -20,7 +20,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      <BrowserRouter basename={(import.meta.env.BASE_URL || "/").replace(/\/$/, "") }>
         <div className="min-h-screen bg-background flex flex-col">
           <Navbar />
           <main className="flex-1">
