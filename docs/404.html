@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Redirecting...</title>
+    <script>
+      // Redirect unknown paths to the SPA index and pass original path in search
+      const pathname = window.location.pathname;
+      // Remove leading slash
+      const p = pathname.startsWith("/") ? pathname.slice(1) : pathname;
+      window.location.replace("/anuragmobile/?" + p);
+    </script>
+  </head>
+  <body></body>
+</html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Redirecting...</title>
+    <script>
+      const pathname = window.location.pathname;
+      window.location.replace(
+        "/anuragmobile/?" + pathname.slice(1)
+      );
+    </script>
+  </head>
+  <body></body>
+</html>
