@@ -1,14 +1,39 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
+  <script>
+  (function () {
+    const redirect = window.location.search;
+    if (redirect) {
+      const path = redirect.slice(1);
+      window.history.replaceState(null, null, "/" + path);
+    }
+  })();
+  </script>
   <head>
-    <meta charset="utf-8" />
-    <title>Redirecting...</title>
-    <script>
-      const pathname = window.location.pathname;
-      window.location.replace(
-        "/anuragmobile/?" + pathname.slice(1)
-      );
-    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <title>Anurag Mobile Repairing Centre</title>
+    <meta name="description" content="Professional mobile phone repair services - Folder replacement, battery replacement, spare parts & accessories. Fast, reliable & affordable." />
+    <meta name="author" content="Anurag Mobile Repairing Centre" />
+
+    <meta property="og:title" content="Anurag Mobile Repairing Centre" />
+    <meta property="og:description" content="Professional mobile phone repair services - Folder replacement, battery replacement, spare parts & accessories." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://res.cloudinary.com/daiev9gkn/image/upload/v1766501038/1000085881-Picsart-AiImageEnhancer.jpg_estzdn.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@AnuragMobile" />
+    <meta name="twitter:image" content="https://res.cloudinary.com/daiev9gkn/image/upload/v1766501038/1000085881-Picsart-AiImageEnhancer.jpg_estzdn.png" />
+    
+    <meta name="theme-color" content="#2563eb" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <script type="module" crossorigin src="/anuragmobile/assets/index-cEp6Hyoe.js"></script>
+    <link rel="stylesheet" crossorigin href="/anuragmobile/assets/index-Dtoiyn6M.css">
   </head>
-  <body></body>
+
+  <body>
+    <div id="root"></div>
+  </body>
 </html>
