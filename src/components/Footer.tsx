@@ -1,4 +1,4 @@
-import { Phone, Mail, Smartphone, MapPin } from "lucide-react";
+import { Phone, Mail, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export const Footer = () => {
@@ -12,17 +12,23 @@ export const Footer = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10">
           {/* Brand */}
           <div className="sm:col-span-2">
-            <div className="flex items-center gap-2 md:gap-3 mb-4 md:mb-6">
-              <div className="w-10 h-10 md:w-12 md:h-12 rounded-lg md:rounded-xl bg-gradient-hero flex items-center justify-center">
-                <Smartphone className="w-5 h-5 md:w-6 md:h-6 text-primary-foreground" />
-              </div>
-              <div>
-                <h3 className="font-display text-lg md:text-xl font-bold text-background">
-                  Anurag Mobile
-                </h3>
-                <p className="text-background/60 text-xs md:text-sm">Repairing Centre</p>
-              </div>
-            </div>
+           <div className="flex items-center gap-3 md:gap-4 mb-4 md:mb-6">
+  <img
+    src="https://res.cloudinary.com/daiev9gkn/image/upload/v1766501038/1000085881-Picsart-AiImageEnhancer.jpg_estzdn.png"
+    alt="Anurag Mobile Repairing Centre Logo"
+    className="w-10 h-10 md:w-12 md:h-12 rounded-lg md:rounded-xl object-cover"
+  />
+  <div>
+    <h3 className="font-display text-lg md:text-xl font-bold text-background">
+      Anurag Mobile
+    </h3>
+    <p className="text-background/60 text-xs md:text-sm">
+      Repairing Centre
+    </p>
+  </div>
+</div>
+
+
             <p className="text-background/70 max-w-md leading-relaxed mb-4 md:mb-6 text-sm md:text-base">
               Your trusted destination for professional mobile phone repair and accessories. 
               Quick diagnostics, genuine spare parts, and reliable repair solutions for all major smartphone brands.
