@@ -59,7 +59,7 @@ export const Home = () => {
 {/* CTA Buttons */}
 <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center lg:justify-start">
 
-  <a href="tel:7033067221" className="w-full sm:w-auto">
+  <a href="https://tracking.anuragmobile.in" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
     <Button variant="accent" size="lg" className="w-full sm:w-auto text-sm md:text-base">
       <Phone className="w-4 h-4 md:w-5 md:h-5" />
       Call Now
