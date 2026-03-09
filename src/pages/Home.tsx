@@ -64,6 +64,11 @@ export const Home = () => {
                     Call Now
                   </Button>
                 </a>
+                 <a href="https://tracking.anuragmobile.in" target="_blank" className="w-full sm:w-auto">
+    <Button variant="hero-outline" size="lg" className="w-full sm:w-auto text-sm md:text-base">
+      Track Your Repair
+    </Button>
+  </a>
                 <Link to="/services" className="w-full sm:w-auto">
                   <Button variant="hero-outline" size="lg" className="w-full sm:w-auto text-sm md:text-base">
                     Our Services
