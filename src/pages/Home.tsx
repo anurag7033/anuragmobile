@@ -56,35 +56,35 @@ export const Home = () => {
                 Quick diagnostics, genuine spare parts, and reliable solutions for all smartphone brands.
               </p>
 
-{/* CTA Buttons */}
-<div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center lg:justify-start">
+                {/* CTA Buttons */}
+                <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center lg:justify-start">
 
-  <a href="https://tracking.anuragmobile.in" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
-    <Button variant="accent" size="lg" className="w-full sm:w-auto text-sm md:text-base">
-      <Phone className="w-4 h-4 md:w-5 md:h-5" />
-      Call Now
-    </Button>
-  </a>
+                  <a href="https://tracking.anuragmobile.in" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+                    <Button variant="accent" size="lg" className="w-full sm:w-auto text-sm md:text-base">
+                      <Phone className="w-4 h-4 md:w-5 md:h-5" />
+                      Call Now
+                    </Button>
+                  </a>
 
-  <a 
-    href="https://tracking.anuragmobile.in"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="w-full sm:w-auto"
-  >
-    <Button variant="hero-outline" size="lg" className="w-full sm:w-auto text-sm md:text-base">
-      Track Your Repair
-    </Button>
-  </a>
+                  <a 
+                    href="https://tracking.anuragmobile.in"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full sm:w-auto"
+                  >
+                    <Button variant="hero-outline" size="lg" className="w-full sm:w-auto text-sm md:text-base">
+                      Track Your Repair
+                    </Button>
+                  </a>
 
-  <Link to="/services" className="w-full sm:w-auto">
-    <Button variant="hero-outline" size="lg" className="w-full sm:w-auto text-sm md:text-base">
-      Our Services
-      <ArrowRight className="w-4 h-4 md:w-5 md:h-5" />
-    </Button>
-  </Link>
+                  <Link to="/services" className="w-full sm:w-auto">
+                    <Button variant="hero-outline" size="lg" className="w-full sm:w-auto text-sm md:text-base">
+                      Our Services
+                      <ArrowRight className="w-4 h-4 md:w-5 md:h-5" />
+                    </Button>
+                  </Link>
 
-</div>
+                </div>
 
               {/* Trust Badges */}
               <div className="flex flex-wrap gap-4 md:gap-6 justify-center lg:justify-start mt-6 md:mt-10 animate-fade-up" style={{ animationDelay: '0.4s' }}>
