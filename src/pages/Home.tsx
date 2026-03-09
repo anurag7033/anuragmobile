@@ -66,13 +66,6 @@ export const Home = () => {
     </Button>
   </a>
 
-  <Link to="/services" className="w-full sm:w-auto">
-    <Button variant="hero-outline" size="lg" className="w-full sm:w-auto text-sm md:text-base">
-      Our Services
-      <ArrowRight className="w-4 h-4 md:w-5 md:h-5" />
-    </Button>
-  </Link>
-
   <a 
     href="https://tracking.anuragmobile.in"
     target="_blank"
@@ -83,6 +76,13 @@ export const Home = () => {
       Track Your Repair
     </Button>
   </a>
+
+  <Link to="/services" className="w-full sm:w-auto">
+    <Button variant="hero-outline" size="lg" className="w-full sm:w-auto text-sm md:text-base">
+      Our Services
+      <ArrowRight className="w-4 h-4 md:w-5 md:h-5" />
+    </Button>
+  </Link>
 
 </div>
 
