@@ -102,13 +102,23 @@ export const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="mt-8 md:mt-16 pt-6 md:pt-8 border-t border-background/10">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-3 md:gap-4">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4 md:gap-4">
             <p className="text-background/50 text-xs md:text-sm text-center md:text-left">
               © {new Date().getFullYear()} Anurag Mobile Repairing Centre. All rights reserved.
             </p>
-            <div className="flex items-center gap-2 text-background/50 text-xs md:text-sm">
-              <MapPin className="w-3.5 h-3.5 md:w-4 md:h-4" />
-              <span>Your Local Mobile Repair Expert</span>
+            <div className="flex items-center gap-4 md:gap-6">
+              <div className="flex items-center gap-2 text-background/50 text-xs md:text-sm">
+                <MapPin className="w-3.5 h-3.5 md:w-4 md:h-4" />
+                <span>Your Local Mobile Repair Expert</span>
+              </div>
+              <a
+                href="https://share.google/plBuR31t4H9GN4agC"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-accent hover:text-background transition-colors text-xs md:text-sm font-semibold hover:underline"
+              >
+                Get Direction
+              </a>
             </div>
           </div>
         </div>

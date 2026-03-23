@@ -154,15 +154,41 @@ export const Contact = () => {
       </section>
 
       {/* Location Info */}
-      <section className="py-10 md:py-16 bg-secondary/30">
-        <div className="container mx-auto px-4 text-center">
-          <MapPin className="w-10 h-10 md:w-12 md:h-12 text-primary mx-auto mb-4" />
-          <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-3">
-            Visit Our Shop
-          </h2>
-          <p className="text-muted-foreground text-sm md:text-base max-w-lg mx-auto">
-            Anurag Mobile Repairing Centre - Your Local Mobile Repair Expert
-          </p>
+      <section className="py-12 md:py-20 bg-secondary/30">
+        <div className="container mx-auto px-4">
+          <div className="max-w-2xl mx-auto bg-card rounded-2xl p-6 md:p-10 border border-border/50 shadow-card">
+            <div className="text-center mb-6">
+              <MapPin className="w-12 h-12 md:w-14 md:h-14 text-primary mx-auto mb-4" />
+              <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-3">
+                Visit Our Shop
+              </h2>
+            </div>
+            
+            <div className="bg-background rounded-xl p-4 md:p-6 mb-6 text-center">
+              <p className="text-foreground font-semibold text-base md:text-lg mb-2">
+                Anurag Mobile Repairing Centre
+              </p>
+              <p className="text-muted-foreground text-sm md:text-base">
+                Vikram Nagar, Near Tooti Diwal
+              </p>
+              <p className="text-muted-foreground text-sm md:text-base">
+                Paara, Lucknow
+              </p>
+            </div>
+            
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+              <a 
+                href="https://share.google/plBuR31t4H9GN4agC"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button variant="accent" size="lg" className="w-full sm:w-auto">
+                  <MapPin className="w-5 h-5" />
+                  Get Direction
+                </Button>
+              </a>
+            </div>
+          </div>
         </div>
       </section>
 
