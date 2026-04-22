@@ -38,7 +38,7 @@ export const Home = () => {
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-10 lg:gap-20 items-center">
             {/* Text Content */}
             <div className="text-center lg:text-left">
               <div className="inline-flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full bg-primary-foreground/10 backdrop-blur-sm text-primary-foreground text-xs md:text-sm font-medium mb-4 md:mb-6 animate-fade-up">
@@ -57,7 +57,7 @@ export const Home = () => {
               </p>
 
                 {/* CTA Buttons */}
-                <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center lg:justify-start">
+                <div className="flex flex-col sm:flex-row flex-wrap gap-3 md:gap-4 justify-center lg:justify-start">
 
                 <a href="tel:7033067221" className="w-full sm:w-auto">
                 <Button variant="accent" size="lg" className="w-full sm:w-auto text-sm md:text-base">
@@ -72,11 +72,11 @@ export const Home = () => {
     className="w-full sm:w-auto"
   >
     <Button 
-      size="lg" 
-      className="w-full sm:w-auto text-sm md:text-base bg-green-600 hover:bg-green-700 text-white"
-    >
-      📅 Book Repair
-    </Button>
+  size="lg" 
+  className variant="accent" size="lg" className="w-full sm:w-auto text-sm md:text-base"
+>
+  📅 Book Repair
+</Button>
   </a>
 
                 <a
