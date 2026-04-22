@@ -65,6 +65,19 @@ export const Home = () => {
                 Call Now
                 </Button>
                 </a>
+                <a
+    href="https://tracking.anuragmobile.in/book-repair"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="w-full sm:w-auto"
+  >
+    <Button 
+      size="lg" 
+      className="w-full sm:w-auto text-sm md:text-base bg-green-600 hover:bg-green-700 text-white"
+    >
+      📅 Book Repair
+    </Button>
+  </a>
 
                 <a
                 href="https://tracking.anuragmobile.in"
@@ -76,16 +89,7 @@ export const Home = () => {
                 Track Your Repair
                 </Button>
                 </a>
-                <a
-                href="https://tracking.anuragmobile.in/book-repair"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full sm:w-auto"
-                >
-                <Button variant="hero-outline" size="lg" className="w-full sm:w-auto text-sm md:text-base">
-                Book Repair
-                </Button>
-                </a>
+               
 
 
                 <Link to="/services" className="w-full sm:w-auto">
